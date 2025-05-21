@@ -1,0 +1,59 @@
+# See: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "asimov-apify-module"
+version = "0.0.0"
+authors = ["ASIMOV Protocol <support@asimov.so>"]
+edition = "2024"
+#rust-version = "1.85"
+description = "ASIMOV module for data import powered by the Apify web automation platform."
+#documentation = "https://docs.rs/asimov-apify-module"
+readme = true
+homepage = "https://github.com/asimov-modules"
+repository = "https://github.com/asimov-modules/asimov-apify-module"
+license = "Unlicense"
+keywords = ["asimov-module", "asimov", "ai"]
+categories = [
+    "command-line-utilities",
+    "api-bindings",
+    "web-programming::http-client",
+    "text-processing",
+]
+publish = true
+
+[features]
+default = ["all", "std"]
+all = ["tracing"]
+std = [
+    "asimov-module/std",
+    "clientele/std",
+    "serde/std",
+    "tracing-subscriber?/fmt",
+    "tracing-subscriber?/std",
+]
+tracing = ["dep:tracing-subscriber"]
+unstable = []
+
+[dependencies]
+asimov-module = { version = "25.0.0-dev.7", default-features = false }
+clientele = { version = "0.3", default-features = false, features = [
+    "argfile",
+    "dotenv",
+    "wild",
+] }
+secrecy = { version = "0.10", default-features = false }
+serde = { version = "1", default-features = false, features = ["derive"] }
+serde_json = { version = "1", default-features = false, features = ["alloc"] }
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+    "alloc",
+    "tracing-log",
+], optional = true }
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = "thin"
+
+[[bin]]
+name = "asimov-apify-importer"
+path = "src/main.rs"

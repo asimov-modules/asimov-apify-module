@@ -1,0 +1,74 @@
+# See: https://docs.github.com/en/actions/writing-workflows
+---
+name: Release
+
+# Trigger on any tag creation:
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact: linux-x86-gnu
+            target: x86_64-unknown-linux-gnu
+            use-zigbuild: true
+            glibc-version: 2.28
+          - os: ubuntu-latest
+            artifact: linux-arm-gnu
+            target: aarch64-unknown-linux-gnu
+            use-zigbuild: true
+            glibc-version: 2.28
+          - os: ubuntu-latest
+            artifact: linux-x86-musl
+            target: x86_64-unknown-linux-musl
+            use-zigbuild: true
+          - os: ubuntu-latest
+            artifact: linux-arm-musl
+            target: aarch64-unknown-linux-musl
+            use-zigbuild: true
+          - os: macos-13
+            artifact: macos-x86
+            target: x86_64-apple-darwin
+          - os: macos-15
+            artifact: macos-arm
+            target: aarch64-apple-darwin
+          - os: ubuntu-latest
+            artifact: windows-x64
+            target: x86_64-pc-windows-gnu
+            extension: exe
+    name: Build ${{ matrix.artifact }}
+    runs-on: ${{ matrix.os }}
+    continue-on-error: false
+    steps:
+      - name: Build
+        uses: asimov-platform/build-rust-action@v4
+        with:
+          target: ${{ matrix.target }}
+          artifact-name: ${{ matrix.artifact }}
+          artifact-prefix: asimov-apify-importer
+          binary-name: asimov-apify-importer
+          binary-extension: ${{ matrix.extension }}
+          strip-artifact: ${{ matrix.strip || 'false' }}
+          use-zigbuild: ${{ matrix.use-zigbuild || 'false' }}
+          glibc-version: ${{ matrix.glibc-version }}
+          rust-toolchain: 1.85.0
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    permissions:
+      contents: write
+    steps:
+      - name: Release
+        uses: asimov-platform/release-action@v2
+        with:
+          token: ${{ secrets.PAT_RELEASE }}
+          changelog-path: CHANGES.md
