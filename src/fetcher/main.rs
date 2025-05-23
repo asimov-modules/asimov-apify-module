@@ -3,8 +3,9 @@
 #[cfg(feature = "std")]
 fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
     //use asimov_apify_module::api::*;
-    use clientele::SysexitsError;
-    use secrecy::SecretString;
+    use asimov_module::getenv;
+    use clientele::SysexitsError::*;
+    use std::io::stdout;
 
     // Load environment variables from `.env`:
     clientele::dotenv().ok();
@@ -26,19 +27,32 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
         .map(|arg| arg.to_string_lossy().into())
         .collect();
     if urls.is_empty() {
-        return Ok(SysexitsError::EX_OK);
+        return Ok(EX_OK);
     }
 
     // Obtain the Apify API token from the environment:
-    let _api_key = SecretString::from(std::env::var("APIFY_TOKEN")?);
+    let Some(_api_key) = getenv::var_secret("APIFY_TOKEN") else {
+        return Ok(EX_CONFIG); // not configured
+    };
 
-    // Send the request and block while waiting for the response:
-    // TODO
+    // Process each of the given URL arguments:
+    for _url in urls {
+        let response = "{}"; // TODO
 
-    Ok(SysexitsError::EX_OK)
+        // Serialize the response data:
+        if cfg!(feature = "pretty") {
+            let response_json: serde_json::Value = serde_json::from_str(&response)?;
+            colored_json::write_colored_json(&response_json, &mut stdout())?;
+            println!();
+        } else {
+            println!("{}", response);
+        }
+    }
+
+    Ok(EX_OK)
 }
 
 #[cfg(not(feature = "std"))]
 fn main() {
-    unimplemented!("asimov-apify-importer requires the 'std' feature")
+    unimplemented!("asimov-apify-fetcher requires the 'std' feature")
 }

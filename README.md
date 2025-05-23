@@ -6,6 +6,14 @@
 
 [ASIMOV] module for data import powered by the [Apify] web automation platform.
 
+## ✨ Features
+
+- Imports structured data from Apify actors.
+- Collects the raw JSON data via the Apify API (requires an API token).
+- Constructs a semantic knowledge graph based on the [KNOW] ontology.
+- Supports plain JSON output as well as [RDF] output formats such as JSON-LD,
+  Turtle, and N-Triples.
+
 ## 🛠️ Prerequisites
 
 - [Rust](https://rust-lang.org) 1.85+ (2024 edition)
@@ -20,10 +28,14 @@ cargo install asimov-apify-module
 
 ## 👉 Examples
 
-```console
-$ export APIFY_TOKEN="..."
+```bash
+export APIFY_TOKEN="..."
+```
 
-$ asimov-apify-importer https://www.linkedin.com/in/arto/
+### Fetching LinkedIn Profiles
+
+```bash
+asimov-apify-fetcher https://www.linkedin.com/in/arto/
 ```
 
 ## ⚙ Configuration
@@ -31,6 +43,19 @@ $ asimov-apify-importer https://www.linkedin.com/in/arto/
 ### Environment Variables
 
 - `APIFY_TOKEN`: (required) the [Apify API token] to use
+
+## 📚 Reference
+
+### Installed Binaries
+
+- `asimov-apify-fetcher`: collects JSON data from the Apify API
+  _(not implemented yet)_
+
+### Supported Actors
+
+Actor   | URL Prefix | JSON | RDF
+:------ | :--------- | :--: | :--:
+<img width="100" height="1"/> | <img width="550" height="1"/> | <img width="50" height="1"/> | <img width="50" height="1"/>
 
 ## 👨‍💻 Development
 
@@ -49,3 +74,5 @@ git clone https://github.com/asimov-modules/asimov-apify-module.git
 [ASIMOV]: https://github.com/asimov-platform
 [Apify]: https://apify.com
 [Apify API token]: https://docs.apify.com/platform/integrations/api
+[KNOW]: https://github.com/know-ontology
+[RDF]: https://github.com/rust-rdf

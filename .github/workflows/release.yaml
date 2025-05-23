@@ -51,8 +51,8 @@ jobs:
         with:
           target: ${{ matrix.target }}
           artifact-name: ${{ matrix.artifact }}
-          artifact-prefix: asimov-apify-importer
-          binary-name: asimov-apify-importer
+          artifact-prefix: asimov-apify-module
+          binary-name: asimov-apify-fetcher
           binary-extension: ${{ matrix.extension }}
           strip-artifact: ${{ matrix.strip || 'false' }}
           use-zigbuild: ${{ matrix.use-zigbuild || 'false' }}
