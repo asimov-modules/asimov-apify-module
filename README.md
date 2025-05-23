@@ -8,7 +8,7 @@
 
 ## ✨ Features
 
-- Imports structured data from Apify actors.
+- Imports structured data from Apify actors (web automation scripts).
 - Collects the raw JSON data via the Apify API (requires an API token).
 - Constructs a semantic knowledge graph based on the [KNOW] ontology.
 - Supports plain JSON output as well as [RDF] output formats such as JSON-LD,
@@ -32,10 +32,22 @@ cargo install asimov-apify-module
 export APIFY_TOKEN="..."
 ```
 
-### Fetching LinkedIn Profiles
+### Fetching Google Results
 
 ```bash
-asimov-apify-fetcher https://www.linkedin.com/in/arto/
+asimov-apify-fetcher https://www.google.com/search?q=Isaac+Asimov
+```
+
+### Fetching X (Twitter) Followers
+
+```bash
+asimov-apify-fetcher https://x.com/bendiken/followers
+```
+
+### Fetching X (Twitter) Followees
+
+```bash
+asimov-apify-fetcher https://x.com/bendiken/following
 ```
 
 ## ⚙ Configuration
@@ -49,12 +61,14 @@ asimov-apify-fetcher https://www.linkedin.com/in/arto/
 ### Installed Binaries
 
 - `asimov-apify-fetcher`: collects JSON data from the Apify API
-  _(not implemented yet)_
 
 ### Supported Actors
 
-Actor   | URL Prefix | JSON | RDF
-:------ | :--------- | :--: | :--:
+Actor   | URL Pattern | JSON | RDF
+:------ | :---------- | :--: | :--:
+Google Search | `https://www.google.com/search?q=:query` | ✅ | 🚧
+X (Twitter) Followers | `https://x.com/:account/followers` | ✅ | 🚧
+X (Twitter) Followees | `https://x.com/:account/following` | ✅ | 🚧
 <img width="100" height="1"/> | <img width="550" height="1"/> | <img width="50" height="1"/> | <img width="50" height="1"/>
 
 ## 👨‍💻 Development

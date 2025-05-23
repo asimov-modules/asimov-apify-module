@@ -36,6 +36,7 @@ dependencies = [
  "serde_json",
  "tracing-subscriber",
  "ureq",
+ "url",
 ]
 
 [[package]]

@@ -2,7 +2,7 @@
 
 #[cfg(feature = "std")]
 fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
-    //use asimov_apify_module::api::*;
+    use asimov_apify_module::{api::*, find_actor_for};
     use asimov_module::getenv;
     use clientele::SysexitsError::*;
     use std::io::stdout;
@@ -31,13 +31,28 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
     }
 
     // Obtain the Apify API token from the environment:
-    let Some(_api_key) = getenv::var_secret("APIFY_TOKEN") else {
+    let Some(api_key) = getenv::var_secret("APIFY_TOKEN") else {
         return Ok(EX_CONFIG); // not configured
     };
+    let api = Apify::new(api_key);
 
     // Process each of the given URL arguments:
-    for _url in urls {
-        let response = "{}"; // TODO
+    for url in urls {
+        // Find the appropriate actor based on the URL prefix:
+        let Some(actor) = find_actor_for(&url) else {
+            return Ok(EX_UNAVAILABLE); // not supported
+        };
+
+        // Send the request and block while waiting for the response:
+        let response = match actor.id {
+            "apify~google-search-scraper" => {
+                api.google_search(&url.parse().map_err(|_| EX_DATAERR)?)?
+            }
+            "C2Wk3I6xAqC4Xi63f" => api.twitter_followers(&url.parse().map_err(|_| EX_DATAERR)?)?,
+            _ => {
+                return Ok(EX_UNAVAILABLE); // not supported
+            }
+        };
 
         // Serialize the response data:
         if cfg!(feature = "pretty") {
