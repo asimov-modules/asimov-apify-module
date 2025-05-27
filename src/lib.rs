@@ -3,7 +3,11 @@
 #![no_std]
 #![forbid(unsafe_code)]
 
+#[cfg(feature = "std")]
+extern crate std;
+
 pub mod api;
+pub mod jq;
 
 mod actor;
 mod actors;

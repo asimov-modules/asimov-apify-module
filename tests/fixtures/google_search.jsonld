@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "know": "https://know.dev/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "icon": {
+      "@id": "know:icon",
+      "@type": "@id"
+    },
+    "image": {
+      "@id": "know:image",
+      "@type": "@id"
+    },
+    "items": {
+      "@id": "know:items",
+      "@type": "know:SearchResult",
+      "@container": "@list"
+    },
+    "link": {
+      "@id": "know:link",
+      "@type": "@id"
+    },
+    "position": {
+      "@id": "know:position",
+      "@type": "xsd:integer"
+    },
+    "summary": {
+      "@id": "know:summary",
+      "@language": "en"
+    },
+    "title": {
+      "@id": "know:title",
+      "@language": "en"
+    }
+  },
+  "@id": "http://www.google.com/search?q=Isaac+Asimov",
+  "@type": "know:SearchResults",
+  "title": "Isaac Asimov",
+  "summary": null,
+  "image": null,
+  "items": [
+    {
+      "@type": "know:SearchResult",
+      "position": 1,
+      "title": "Isaac Asimov",
+      "summary": "Asimov was considered one of the \"Big Three\" science fiction writers, along with Robert A. Heinlein and Arthur C. Clarke.",
+      "link": "https://en.wikipedia.org/wiki/Isaac_Asimov",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 2,
+      "title": "Isaac Asimov Home Page",
+      "summary": "Here you'll find a comprehensive collection of resources pertaining to Isaac Asimov (1920-1992), the quintessential author, who in his lifetime wrote over 500 ...",
+      "link": "http://www.asimovonline.com/",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 3,
+      "title": "Isaac Asimov (Author of Foundation)",
+      "summary": "Isaac Asimov, a professor of biochemistry, wrote as a highly successful author, best known for his books. Asimov, professor, generally considered of all time, ...",
+      "link": "https://www.goodreads.com/author/show/16667.Isaac_Asimov",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 4,
+      "title": "Foundation (book series)",
+      "summary": "The Foundation series is a science fiction book series written by American author Isaac Asimov. First published as a series of short stories and novellas in ...",
+      "link": "https://en.wikipedia.org/wiki/Foundation_(book_series)",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 5,
+      "title": "Isaac Asimov | Biography & Facts",
+      "summary": "American author and biochemist, a highly successful and prolific writer of science fiction and of science books for the layperson.",
+      "link": "https://www.britannica.com/biography/Isaac-Asimov",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 6,
+      "title": "Isaac Asimov Is One of The Best Writers of All Time : r/scifi",
+      "summary": "Asimov is definitely great and a big name for a reason, some of his best stories are up with the very best ever to have been written.",
+      "link": "https://www.reddit.com/r/scifi/comments/10zvlsf/isaac_asimov_is_one_of_the_best_writers_of_all/",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 7,
+      "title": "List of Books by Isaac Asimov",
+      "summary": "Asimov penned over 400 books on subjects ranging from science to Shakespeare to history, though he was most loved for his award-winning science fiction sagas.",
+      "link": "https://www.barnesandnoble.com/b/contributor/isaac-asimov/_/N-2kao",
+      "icon": null
+    },
+    {
+      "@type": "know:SearchResult",
+      "position": 8,
+      "title": "Summary Bibliography: Isaac Asimov",
+      "summary": "Note: There are other authors with the same name: Isaac Asimov (in error) · Author: Isaac Asimov Author Record # 5 · Legal Name: Asimov, Isaac · Birthplace: ...",
+      "link": "https://www.isfdb.org/cgi-bin/ea.cgi?5",
+      "icon": null
+    }
+  ]
+}

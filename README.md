@@ -11,8 +11,7 @@
 - Imports structured data from Apify actors (web automation scripts).
 - Collects the raw JSON data via the Apify API (requires an API token).
 - Constructs a semantic knowledge graph based on the [KNOW] ontology.
-- Supports plain JSON output as well as [RDF] output formats such as JSON-LD,
-  Turtle, and N-Triples.
+- Supports plain JSON output as well as [RDF] output in the form of JSON-LD.
 
 ## 🛠️ Prerequisites
 
@@ -35,7 +34,8 @@ export APIFY_TOKEN="..."
 ### Fetching Google Results
 
 ```bash
-asimov-apify-fetcher https://www.google.com/search?q=Isaac+Asimov
+asimov-apify-fetcher https://www.google.com/search?q=Isaac+Asimov   # JSON
+asimov-apify-importer https://www.google.com/search?q=Isaac+Asimov  # JSON-LD
 ```
 
 ### Fetching X (Twitter) Followers
@@ -61,12 +61,13 @@ asimov-apify-fetcher https://x.com/bendiken/following
 ### Installed Binaries
 
 - `asimov-apify-fetcher`: collects JSON data from the Apify API
+- `asimov-apify-importer`: collects and transforms JSON into JSON-LD
 
 ### Supported Actors
 
 Actor   | URL Pattern | JSON | RDF
 :------ | :---------- | :--: | :--:
-Google Search | `https://www.google.com/search?q=:query` | ✅ | 🚧
+Google Search | `https://www.google.com/search?q=:query` | ✅ | ✅
 X (Twitter) Followers | `https://x.com/:account/followers` | ✅ | 🚧
 X (Twitter) Followees | `https://x.com/:account/following` | ✅ | 🚧
 <img width="100" height="1"/> | <img width="550" height="1"/> | <img width="50" height="1"/> | <img width="50" height="1"/>
