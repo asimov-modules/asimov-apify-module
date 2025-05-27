@@ -1,0 +1,192 @@
+[
+  {
+    "#debug": {
+      "errorMessages": [],
+      "loadedUrl": "http://www.google.com/search?q=Isaac+Asimov",
+      "method": "GET",
+      "requestId": "JNiNpf4L6tWEZ9X",
+      "retryCount": 0,
+      "statusCode": 200,
+      "url": "http://www.google.com/search?q=Isaac+Asimov"
+    },
+    "#error": false,
+    "aiOverview": {
+      "content": "",
+      "sources": [],
+      "type": "static"
+    },
+    "customData": null,
+    "hasNextPage": true,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/Dr7dan4GSXEtaf7A0/records/JNiNpf4L6tWEZ9X-0.html",
+    "organicResults": [
+      {
+        "description": "Asimov was considered one of the \"Big Three\" science fiction writers, along with Robert A. Heinlein and Arthur C. Clarke.",
+        "displayedUrl": "https://en.wikipedia.org › wiki › Isaac_Asimov",
+        "emphasizedKeywords": [
+          "Asimov"
+        ],
+        "position": 1,
+        "productInfo": {},
+        "siteLinks": [
+          {
+            "description": "General science · Fact and Fancy (1962) · View from a Height ...",
+            "title": "Isaac Asimov bibliography ...",
+            "url": "https://en.wikipedia.org/wiki/Isaac_Asimov_bibliography_(categorical)"
+          },
+          {
+            "description": "Its population in 1998 was 215. ... The village is the birthplace ...",
+            "title": "Petrovichi",
+            "url": "https://en.wikipedia.org/wiki/Petrovichi"
+          },
+          {
+            "description": "",
+            "title": "More results from wikipedia.org »",
+            "url": "https://www.google.com/search?q=Isaac+Asimov+site:wikipedia.org&sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQrAN6BAhTEAE"
+          }
+        ],
+        "title": "Isaac Asimov",
+        "type": "organic",
+        "url": "https://en.wikipedia.org/wiki/Isaac_Asimov"
+      },
+      {
+        "description": "Here you'll find a comprehensive collection of resources pertaining to Isaac Asimov (1920-1992), the quintessential author, who in his lifetime wrote over 500 ...",
+        "displayedUrl": "http://www.asimovonline.com",
+        "emphasizedKeywords": [
+          "Isaac Asimov"
+        ],
+        "position": 2,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Isaac Asimov Home Page",
+        "type": "organic",
+        "url": "http://www.asimovonline.com/"
+      },
+      {
+        "description": "Isaac Asimov, a professor of biochemistry, wrote as a highly successful author, best known for his books. Asimov, professor, generally considered of all time, ...",
+        "displayedUrl": "https://www.goodreads.com › 16667.Isaac_Asimov",
+        "emphasizedKeywords": [
+          "a professor of biochemistry"
+        ],
+        "position": 3,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Isaac Asimov (Author of Foundation)",
+        "type": "organic",
+        "url": "https://www.goodreads.com/author/show/16667.Isaac_Asimov"
+      },
+      {
+        "description": "The Foundation series is a science fiction book series written by American author Isaac Asimov. First published as a series of short stories and novellas in ...",
+        "displayedUrl": "https://en.wikipedia.org › wiki › Foundation_(book_ser...",
+        "emphasizedKeywords": [
+          "science fiction book series written by American author Isaac Asimov"
+        ],
+        "position": 4,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Foundation (book series)",
+        "type": "organic",
+        "url": "https://en.wikipedia.org/wiki/Foundation_(book_series)"
+      },
+      {
+        "date": "2025-05-20T14:23:50.833Z",
+        "description": "American author and biochemist, a highly successful and prolific writer of science fiction and of science books for the layperson.",
+        "displayedUrl": "https://www.britannica.com › ... › Novels & Short Stories",
+        "emphasizedKeywords": [
+          "American author and biochemist"
+        ],
+        "position": 5,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Isaac Asimov | Biography & Facts",
+        "type": "organic",
+        "url": "https://www.britannica.com/biography/Isaac-Asimov"
+      },
+      {
+        "commentsAmount": "150+ comments",
+        "description": "Asimov is definitely great and a big name for a reason, some of his best stories are up with the very best ever to have been written.",
+        "displayedUrl": "Reddit › r/scifi",
+        "emphasizedKeywords": [
+          "Asimov is definitely great"
+        ],
+        "lastUpdated": "2 years ago",
+        "position": 6,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Isaac Asimov Is One of The Best Writers of All Time : r/scifi",
+        "type": "organic",
+        "url": "https://www.reddit.com/r/scifi/comments/10zvlsf/isaac_asimov_is_one_of_the_best_writers_of_all/"
+      },
+      {
+        "description": "Asimov penned over 400 books on subjects ranging from science to Shakespeare to history, though he was most loved for his award-winning science fiction sagas.",
+        "displayedUrl": "https://www.barnesandnoble.com › Authors",
+        "emphasizedKeywords": [
+          "Asimov penned over 400 books"
+        ],
+        "position": 7,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "List of Books by Isaac Asimov",
+        "type": "organic",
+        "url": "https://www.barnesandnoble.com/b/contributor/isaac-asimov/_/N-2kao"
+      },
+      {
+        "description": "Note: There are other authors with the same name: Isaac Asimov (in error) · Author: Isaac Asimov Author Record # 5 · Legal Name: Asimov, Isaac · Birthplace: ...",
+        "displayedUrl": "https://www.isfdb.org › cgi-bin",
+        "emphasizedKeywords": [
+          "Author: Isaac Asimov"
+        ],
+        "position": 8,
+        "productInfo": {},
+        "siteLinks": [],
+        "title": "Summary Bibliography: Isaac Asimov",
+        "type": "organic",
+        "url": "https://www.isfdb.org/cgi-bin/ea.cgi?5"
+      }
+    ],
+    "paidProducts": [],
+    "paidResults": [],
+    "peopleAlsoAsk": [],
+    "relatedQueries": [
+      {
+        "title": "Isaac Asimov best books",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=Isaac+Asimov+best+books&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAh7EAE"
+      },
+      {
+        "title": "Isaac Asimov famous works",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=Isaac+Asimov+famous+works&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAh5EAE"
+      },
+      {
+        "title": "I, Robot Isaac Asimov",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=I,+Robot+Isaac+Asimov&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAh0EAE"
+      },
+      {
+        "title": "Isaac Asimov Foundation",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=Isaac+Asimov+Foundation&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAhzEAE"
+      },
+      {
+        "title": "Isaac Asimov books in order",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=Isaac+Asimov+books+in+order&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAhyEAE"
+      },
+      {
+        "title": "Isaac Asimov quotes",
+        "url": "https://www.google.com/search?sca_esv=7e90f080ec9a8cdb&gl=us&hl=en&q=Isaac+Asimov+quotes&sa=X&ved=2ahUKEwjKiJSB7cONAxVQJDQIHXDsIoEQ1QJ6BAhsEAE"
+      }
+    ],
+    "resultsTotal": 8140000,
+    "searchQuery": {
+      "countryCode": "US",
+      "device": "DESKTOP",
+      "domain": "google.com",
+      "languageCode": null,
+      "locationUule": null,
+      "page": 1,
+      "resultsPerPage": 10,
+      "term": "Isaac Asimov",
+      "type": "SEARCH",
+      "url": "http://www.google.com/search?q=Isaac+Asimov"
+    },
+    "serpProviderCode": "L",
+    "suggestedResults": [],
+    "url": "http://www.google.com/search?q=Isaac+Asimov"
+  }
+]
