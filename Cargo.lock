@@ -35,7 +35,7 @@ dependencies = [
 
 [[package]]
 name = "asimov-apify-module"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
  "asimov-module",
  "clientele",
