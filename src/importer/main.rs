@@ -45,15 +45,14 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
 
         // Send the request and block while waiting for the response:
         let response = match actor.id {
-            "apify~google-search-scraper" => {
-                api.google_search(&url.parse().map_err(|_| EX_DATAERR)?)?
-            }
-            "C2Wk3I6xAqC4Xi63f" => api.twitter_followers(&url.parse().map_err(|_| EX_DATAERR)?)?,
+            "apify~google-search-scraper" => jq::google_search()
+                .filter_json_str(api.google_search(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
+            "C2Wk3I6xAqC4Xi63f" => jq::x_follows()
+                .filter_json_str(api.x_follows(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
             _ => {
                 return Ok(EX_UNAVAILABLE); // not supported
             }
         };
-        let response = jq::google_search().filter_json_str(response)?;
 
         // Serialize the response data:
         if cfg!(feature = "pretty") {

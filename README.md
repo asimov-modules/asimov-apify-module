@@ -34,20 +34,22 @@ export APIFY_TOKEN="..."
 ### Fetching Google Results
 
 ```bash
-asimov-apify-fetcher https://www.google.com/search?q=Isaac+Asimov   # JSON
+asimov-apify-fetcher  https://www.google.com/search?q=Isaac+Asimov  # JSON
 asimov-apify-importer https://www.google.com/search?q=Isaac+Asimov  # JSON-LD
 ```
 
 ### Fetching X (Twitter) Followers
 
 ```bash
-asimov-apify-fetcher https://x.com/bendiken/followers
+asimov-apify-fetcher  https://x.com/apify/followers  # JSON
+asimov-apify-importer https://x.com/apify/followers  # JSON-LD
 ```
 
 ### Fetching X (Twitter) Followees
 
 ```bash
-asimov-apify-fetcher https://x.com/bendiken/following
+asimov-apify-fetcher  https://x.com/apify/following  # JSON
+asimov-apify-importer https://x.com/apify/following  # JSON-LD
 ```
 
 ## ⚙ Configuration
@@ -68,8 +70,8 @@ asimov-apify-fetcher https://x.com/bendiken/following
 Actor   | URL Pattern | JSON | RDF
 :------ | :---------- | :--: | :--:
 Google Search | `https://www.google.com/search?q=:query` | ✅ | ✅
-X (Twitter) Followers | `https://x.com/:account/followers` | ✅ | 🚧
-X (Twitter) Followees | `https://x.com/:account/following` | ✅ | 🚧
+X (Twitter) Followers | `https://x.com/:account/followers` | ✅ | ✅
+X (Twitter) Followees | `https://x.com/:account/following` | ✅ | ✅
 <img width="100" height="1"/> | <img width="550" height="1"/> | <img width="50" height="1"/> | <img width="50" height="1"/>
 
 ## 👨‍💻 Development

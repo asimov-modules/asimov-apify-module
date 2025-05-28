@@ -1,0 +1,1344 @@
+{
+  "@context": {
+    "know": "https://know.dev/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "count": {
+      "@id": "know:count",
+      "@type": "xsd:integer"
+    },
+    "followees": {
+      "@id": "know:followees",
+      "@type": "know:Collection"
+    },
+    "followers": {
+      "@id": "know:followers",
+      "@type": "know:Collection"
+    },
+    "id": {
+      "@id": "know:id",
+      "@type": "xsd:string"
+    },
+    "image": {
+      "@id": "know:image",
+      "@type": "@id"
+    },
+    "items": {
+      "@id": "rdfs:member",
+      "@type": "know:UserAccount",
+      "@container": "@set"
+    },
+    "link": {
+      "@id": "know:link",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "know:name",
+      "@type": "xsd:string"
+    },
+    "posts": {
+      "@id": "know:posts",
+      "@type": "know:Collection"
+    },
+    "subscriptions": {
+      "@id": "know:subscriptions",
+      "@type": "know:Collection"
+    },
+    "summary": {
+      "@id": "know:summary",
+      "@language": "en"
+    },
+    "title": {
+      "@id": "know:title",
+      "@language": "en"
+    }
+  },
+  "@id": "https://x.com/bright_init",
+  "@type": [
+    "know:UserProfile",
+    "know:UserAccount"
+  ],
+  "id": "bright_init",
+  "followees": {
+    "items": [
+      {
+        "@id": "https://x.com/ClimateSubak",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ClimateSubak",
+        "title": "Subak",
+        "summary": "We find, fund, and scale organisations and individuals who are saving the planet with data. Join 700+ climate innovators: https://t.co/aeSwHToFoZ 🌍",
+        "image": "https://pbs.twimg.com/profile_images/1415226867649548289/_mDf-n4F_normal.jpg",
+        "link": "http://subak.org"
+      },
+      {
+        "@id": "https://x.com/ifgevents",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ifgevents",
+        "title": "IfG events",
+        "summary": "The @instituteforgov runs a diverse range of events linked to its research and learning programmes.",
+        "image": "https://pbs.twimg.com/profile_images/915250420548808708/ggC82LTy_normal.jpg",
+        "link": "https://www.instituteforgovernment.org.uk/our-events/upcoming-events"
+      },
+      {
+        "@id": "https://x.com/digime",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "digime",
+        "title": "digi.me",
+        "summary": "Take control of the data that powers your digital life - and experience the magic of apps and services designed with https://t.co/Dr09hz5j22’s private sharing technology.",
+        "image": "https://pbs.twimg.com/profile_images/1056945003006705665/QFM-vn4s_normal.jpg",
+        "link": "https://digi.me"
+      },
+      {
+        "@id": "https://x.com/omri_orgad",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "omri_orgad",
+        "title": "Omri Orgad",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1221558313147609092/OU6-u-rN_normal.jpg",
+        "link": "http://www.linkedin.com/pub/omri-orgad/9/4bb/4b"
+      },
+      {
+        "@id": "https://x.com/TheForeigner_US",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TheForeigner_US",
+        "title": "The Foreigner",
+        "summary": "Est. 1986 in Israel, currently in NC, USA\n\n98% in Hebrew, because why not",
+        "image": "https://pbs.twimg.com/profile_images/1633959650902016001/gBC15qpJ_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/TheJDC",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TheJDC",
+        "title": "JDC | The Joint",
+        "summary": "JDC is the leading global Jewish humanitarian organization, working in 70 countries to lift lives and strengthen communities.",
+        "image": "https://pbs.twimg.com/profile_images/1092430029575704577/5fOLzCOM_normal.jpg",
+        "link": "http://jdc.org"
+      },
+      {
+        "@id": "https://x.com/NortheasternCOS",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "NortheasternCOS",
+        "title": "Northeastern COS",
+        "summary": "The College of Science at Northeastern University in Boston offers programs in physical sciences, life sciences, and mathematics. Share with us: #COSconnects",
+        "image": "https://pbs.twimg.com/profile_images/1897325377803952128/vWcNXCSl_normal.jpg",
+        "link": "http://cos.northeastern.edu"
+      },
+      {
+        "@id": "https://x.com/the_b_cat",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "the_b_cat",
+        "title": "Adrian",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1594712407858888705/oX9niCjj_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/Schusterman_Org",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Schusterman_Org",
+        "title": "Schusterman Family Philanthropies",
+        "summary": "Working to achieve more just and inclusive societies",
+        "image": "https://pbs.twimg.com/profile_images/1571917734409125889/ZId7ZqaA_normal.jpg",
+        "link": "http://www.schusterman.org"
+      },
+      {
+        "@id": "https://x.com/TechnionLive",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TechnionLive",
+        "title": "Technion Israel",
+        "summary": "Technion ~ Israel Institute of Technology. Over 100 years of commitment to science, technology, innovation & education.",
+        "image": "https://pbs.twimg.com/profile_images/988724981566754816/s6S6RKVJ_normal.jpg",
+        "link": "http://technion.ac.il"
+      },
+      {
+        "@id": "https://x.com/KozminskiUni",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "KozminskiUni",
+        "title": "Kozminski University",
+        "summary": "\"A New School for a New World\" & THE ONLY UNIVERSITY FROM POLAND AMONG THE TOP EUROPEAN BUSINESS SCHOOLS @FT\n\n@AACSB @Assoc_of_MBAs #EQUIS #BSIS @RatingImpact",
+        "image": "https://pbs.twimg.com/profile_images/1808058781416239104/KiK3dSoI_normal.jpg",
+        "link": "http://www.kozminski.edu.pl"
+      },
+      {
+        "@id": "https://x.com/GeorgiaSouthern",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "GeorgiaSouthern",
+        "title": "GeorgiaSouthern",
+        "summary": "The official Georgia Southern University Twitter feed. Home of the Eagle Nation...Go Eagles!",
+        "image": "https://pbs.twimg.com/profile_images/851819600513822720/HiQ_4rvi_normal.jpg",
+        "link": "http://www.georgiasouthern.edu/Apply"
+      },
+      {
+        "@id": "https://x.com/BostonCollege",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "BostonCollege",
+        "title": "Boston College",
+        "summary": "The official account of Boston College, a premier, Jesuit Catholic university. #WeAreBC",
+        "image": "https://pbs.twimg.com/profile_images/588843738362810368/Y1ABvCns_normal.jpg",
+        "link": "http://bc.edu"
+      },
+      {
+        "@id": "https://x.com/HughShanahan",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "HughShanahan",
+        "title": "Hugh Shanahan",
+        "summary": "Not posting/liking here until Twitter is under sane management again (sorry). I continue to blather at @hughshanahan@mastodon.ie and @hughshanahan.bsky.social.",
+        "image": "https://pbs.twimg.com/profile_images/768166582300258307/lsZf4nq3_normal.jpg",
+        "link": "http://www.shanahanlab.org"
+      },
+      {
+        "@id": "https://x.com/RoyalHolloway",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "RoyalHolloway",
+        "title": "Royal Holloway",
+        "summary": "Royal Holloway, University of London is one of the UK’s leading research-intensive universities, with a base in central London and a stunning Surrey campus.",
+        "image": "https://pbs.twimg.com/profile_images/1895518203314405376/dchtttH0_normal.jpg",
+        "link": "https://linktr.ee/royal_holloway"
+      },
+      {
+        "@id": "https://x.com/Northeastern",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Northeastern",
+        "title": "Northeastern U.",
+        "summary": "Northeastern is a global, experiential, research university built on a tradition of engagement with the world. #LikeAHusky",
+        "image": "https://pbs.twimg.com/profile_images/1295842645097549830/FJ16ThMG_normal.jpg",
+        "link": "http://northeastern.edu"
+      },
+      {
+        "@id": "https://x.com/uiowa",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "uiowa",
+        "title": "University of Iowa",
+        "summary": "Official University of Iowa account. With more than 200 areas of study, the University of Iowa enrolls 30,000+ students and offers many top-ranked programs.",
+        "image": "https://pbs.twimg.com/profile_images/1265278125165785089/r8bMCfqE_normal.png",
+        "link": "http://www.uiowa.edu"
+      },
+      {
+        "@id": "https://x.com/AucklandUni",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "AucklandUni",
+        "title": "University of Auckland | Waipapa Taumata Rau",
+        "summary": "Official account for the University of Auckland | Waipapa Taumata Rau, posting updates about research, news, events & campus life.",
+        "image": "https://pbs.twimg.com/profile_images/1496591492265447424/DZbO_ts6_normal.jpg",
+        "link": "http://www.auckland.ac.nz"
+      },
+      {
+        "@id": "https://x.com/up_Reach",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "up_Reach",
+        "title": "upReach",
+        "summary": "We support undergraduates from lower socioeconomic backgrounds to secure top graduate jobs. This account is inactive, follow us on Bluesky.",
+        "image": "https://pbs.twimg.com/profile_images/1341316549018267651/2DnZ9-6K_normal.jpg",
+        "link": "http://upReach.org.uk"
+      },
+      {
+        "@id": "https://x.com/sciencespo",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "sciencespo",
+        "title": "Sciences Po",
+        "summary": "Welcome to the official account for Sciences Po. Bienvenue sur le compte officiel de Sciences Po.",
+        "image": "https://pbs.twimg.com/profile_images/1909948724467404800/Tgu3FjkA_normal.jpg",
+        "link": "https://bsky.app/profile/sciencespo.bsky.social"
+      },
+      {
+        "@id": "https://x.com/bengurionu",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "bengurionu",
+        "title": "Ben-Gurion University of the Negev",
+        "summary": "When you change your perspective, you discover new worlds.",
+        "image": "https://pbs.twimg.com/profile_images/1315187444963307521/UFfELp_V_normal.png",
+        "link": "https://in.bgu.ac.il/en/Pages/default.aspx"
+      },
+      {
+        "@id": "https://x.com/TelAvivUni",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TelAvivUni",
+        "title": "Tel Aviv University",
+        "summary": "Leading research university. World's 5th in entrepreneurship, 7ᵗʰ in alumni #Unicorn Startups, top 100 in #Innovation. Join us on the Road to Breakthroughs!",
+        "image": "https://pbs.twimg.com/profile_images/1259764362274889733/cMtVPDtz_normal.jpg",
+        "link": "https://english.tau.ac.il/"
+      },
+      {
+        "@id": "https://x.com/ucsantabarbara",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ucsantabarbara",
+        "title": "UC Santa Barbara",
+        "summary": "Official account of UC Santa Barbara, a dynamic environment where beauty meets brilliance. Follow for news, achievements, and discoveries out of #UCSB.",
+        "image": "https://pbs.twimg.com/profile_images/943187671102267392/yaoNgznZ_normal.jpg",
+        "link": "http://www.ucsb.edu"
+      },
+      {
+        "@id": "https://x.com/UCSanDiego",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "UCSanDiego",
+        "title": "UC San Diego",
+        "summary": "The official Twitter account for the University of California San Diego. Our most cherished tradition is challenging tradition.",
+        "image": "https://pbs.twimg.com/profile_images/1161027494268420096/mMAIqDBB_normal.jpg",
+        "link": "http://www.ucsd.edu"
+      },
+      {
+        "@id": "https://x.com/WEDF_foundation",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "WEDF_foundation",
+        "title": "World Ethical Data Foundation",
+        "summary": "We explore the full range of questions about the use and future of data — from AI, analytics & privacy to press freedoms & political process. \n\n@WEDF_forum",
+        "image": "https://pbs.twimg.com/profile_images/1362089385018208262/d7f3qb00_normal.jpg",
+        "link": "https://worldethicaldata.org"
+      },
+      {
+        "@id": "https://x.com/WEDF_forum",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "WEDF_forum",
+        "title": "World Ethical Data Forum",
+        "summary": "Open source; privacy-respecting; paywall-free. Register for future sessions & watch WEDF on demand here: https://t.co/gckeT0cioZ",
+        "image": "https://pbs.twimg.com/profile_images/1361861429264056321/mFxufu45_normal.jpg",
+        "link": "https://worldethicaldataforum.org/"
+      },
+      {
+        "@id": "https://x.com/JaneFrostMRS",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "JaneFrostMRS",
+        "title": "Jane Frost",
+        "summary": "Chief Executive Officer at MRS – the world’s largest research association. Experienced marketer, and champion of all things research.  All views are my own.",
+        "image": "https://pbs.twimg.com/profile_images/1908550500/Twitter_image_of_Jane2_normal.jpg",
+        "link": "http://www.mrs.org.uk"
+      },
+      {
+        "@id": "https://x.com/QMUL",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "QMUL",
+        "title": "Queen Mary University of London",
+        "summary": "Queen Mary University of London is one of the UK's leading research universities, a place where difference leads to greatness.",
+        "image": "https://pbs.twimg.com/profile_images/1676547806788476929/slt7OYFK_normal.jpg",
+        "link": "http://qmul.ac.uk"
+      },
+      {
+        "@id": "https://x.com/KingsCollegeLon",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "KingsCollegeLon",
+        "title": "King's College London",
+        "summary": "News from King's College London | King’s is a multi-faculty research-led institution & one of the top 10 UK universities in the world | Contact: comms@kcl.ac.uk",
+        "image": "https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_normal.jpg",
+        "link": "http://www.kcl.ac.uk"
+      },
+      {
+        "@id": "https://x.com/Princeton",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Princeton",
+        "title": "Princeton University",
+        "summary": "#Princeton25 Commencement: May 25-27.\n\nThe official account of Princeton University. In the Nation’s Service and the Service of Humanity.",
+        "image": "https://pbs.twimg.com/profile_images/1926617285503901697/_gHT9Yey_normal.jpg",
+        "link": "http://www.standup.princeton.edu"
+      },
+      {
+        "@id": "https://x.com/UniofOxford",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "UniofOxford",
+        "title": "University of Oxford",
+        "summary": "Welcome to our official account 👋  Follow for the latest news, research and updates about life at Oxford.",
+        "image": "https://pbs.twimg.com/profile_images/1763165205020696576/3uRgf_U__normal.jpg",
+        "link": "http://www.ox.ac.uk"
+      },
+      {
+        "@id": "https://x.com/hti_labs_",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "hti_labs_",
+        "title": "hti labs",
+        "summary": "Combatting sex trafficking, domestic violence, and sexual assault through data-driven research and technology.",
+        "image": "https://pbs.twimg.com/profile_images/1230694204571082752/3KparWz6_normal.jpg",
+        "link": "http://htilabs.org"
+      },
+      {
+        "@id": "https://x.com/HuffPostGreen",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "HuffPostGreen",
+        "title": "HuffPost Green",
+        "summary": "Latest news on energy, environment, animals and more.",
+        "image": "https://pbs.twimg.com/profile_images/875370169211768833/mXJua0Ib_normal.jpg",
+        "link": "https://www.huffpost.com/impact/green"
+      }
+    ]
+  },
+  "followers": {
+    "items": [
+      {
+        "@id": "https://x.com/haileyaileen16",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "haileyaileen16",
+        "title": "Hailey Dickson",
+        "summary": "Seattle City Council Technology Board | Fulbright Scholar",
+        "image": "https://pbs.twimg.com/profile_images/1856187308674109440/zjE4C8E3_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/abcholmes",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "abcholmes",
+        "title": "Alex Holmes OBE",
+        "summary": "Deputy CEO @DianaAward | Director @BBCCiN | Founder @AntiBullyingPro Ambassadors | @gatesfoundation | @QueensLeaders | https://t.co/JidKgunXlq | Views Own",
+        "image": "https://pbs.twimg.com/profile_images/1462920442931515395/c7kDZb2Y_normal.jpg",
+        "link": "http://www.bbc.co.uk/news/av/education-42750935/how-i-save-children-from-bullies"
+      },
+      {
+        "@id": "https://x.com/AnnaEdmundson",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "AnnaEdmundson",
+        "title": "Anna Edmundson",
+        "summary": "Head of Policy & Public Affairs @NSPCC. Views mine. Ex-barrister. Tweet law, child protection, children’s rights. Proud Londoner.",
+        "image": "https://pbs.twimg.com/profile_images/745660435156901888/0dNCvHPq_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/BlexLxx",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "BlexLxx",
+        "title": "BlexXxX",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1497310468247068672/XXmpeMRp_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/TingMe_Social",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TingMe_Social",
+        "title": "TingMe Social",
+        "summary": "Tingme is a secure social media platform for children to connect and share content safely🤸‍.  Combatting online predators and cyberbullying.\n\nIG: tingme_social",
+        "image": "https://pbs.twimg.com/profile_images/1517438982539419648/nKZpBjrJ_normal.jpg",
+        "link": "https://www.tingme.world"
+      },
+      {
+        "@id": "https://x.com/DesignItForUs",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DesignItForUs",
+        "title": "Design It For Us",
+        "summary": "Coalition of young activists and organizations advocating for safer social media and online platforms for kids, teens, and young adults. #DesignItForUs",
+        "image": "https://pbs.twimg.com/profile_images/1802700918275584002/ITPA7R5E_normal.jpg",
+        "link": "https://www.designitforus.org"
+      },
+      {
+        "@id": "https://x.com/EmmaBla55820253",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "EmmaBla55820253",
+        "title": "Emma Blake",
+        "summary": "Paediatric Consultant",
+        "image": "https://pbs.twimg.com/profile_images/1355838678988427272/-HqtmRMz_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/accountabletech",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "accountabletech",
+        "title": "Accountable Tech",
+        "summary": "Doing what our name says, holding Big Tech accountable. #ReinInBigTech",
+        "image": "https://pbs.twimg.com/profile_images/1730327590752198656/msn5ZP3w_normal.jpg",
+        "link": "https://accountabletech.org"
+      },
+      {
+        "@id": "https://x.com/jacquesmarcoux",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "jacquesmarcoux",
+        "title": "Jacques Marcoux",
+        "summary": "Researcher/Data analyst. Former CBC News data journalist",
+        "image": "https://pbs.twimg.com/profile_images/879342764399480833/htGiPleV_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/emPSN",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "emPSN",
+        "title": "emPSN",
+        "summary": "A non-profit managed broadband provider that delivers fast, safe and secure connectivity to schools, MATs & local authorities.",
+        "image": "https://pbs.twimg.com/profile_images/669533392933888000/ufbEWKMi_normal.png",
+        "link": "http://www.empsn.org.uk"
+      },
+      {
+        "@id": "https://x.com/khopwood",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "khopwood",
+        "title": "Karl Hopwood",
+        "summary": "esafety consultant",
+        "image": "https://pbs.twimg.com/profile_images/1083778834942414849/R4YTLDvN_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/bethan314",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "bethan314",
+        "title": "Bethan",
+        "summary": "🏴󠁧󠁢󠁷󠁬󠁳󠁿❤\nData Scientist & Data Science doctoral student\n\n\"I am defined by how I choose to spend the life I almost lost\"\n\nViews my own or my cats'",
+        "image": "https://pbs.twimg.com/profile_images/1721507347527323648/3jHTp3c4_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/HannoFenech",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "HannoFenech",
+        "title": "Hanno Fenech",
+        "summary": "infrequent, lackluster tweeting.",
+        "image": "https://pbs.twimg.com/profile_images/1651194071350738947/FdL4iciG_normal.jpg",
+        "link": "https://www.instagram.com/hannofenech/"
+      },
+      {
+        "@id": "https://x.com/_andyburrows",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "_andyburrows",
+        "title": "Andy Burrows",
+        "summary": "CEO @mollyroseorg / tech accountability / good trouble / ‘launcher of PDF missiles’ (Playbook)",
+        "image": "https://pbs.twimg.com/profile_images/1837144274967711744/wPHX1CgN_normal.jpg",
+        "link": "https://andyburrows.substack.com"
+      },
+      {
+        "@id": "https://x.com/Dhavaldudh13986",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Dhavaldudh13986",
+        "title": "Dhaval dudhat",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1655798596581867524/ThFeGItB_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/Danielmarcus76",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Danielmarcus76",
+        "title": "Daniel Marcus",
+        "summary": "life is great",
+        "image": "https://pbs.twimg.com/profile_images/1488801965354229760/JKMJ0kit_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/ZachPraiss",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ZachPraiss",
+        "title": "Zach Praiss",
+        "summary": "Fighting for a future for all. Engagements ≠ endorsements.",
+        "image": "https://pbs.twimg.com/profile_images/1758933226066710528/s9uoroRH_normal.jpg",
+        "link": "https://www.instagram.com/zachpraiss/"
+      },
+      {
+        "@id": "https://x.com/DoveIP_welcome",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DoveIP_welcome",
+        "title": "Doveproxy",
+        "summary": "#Doveproxy provides #mobileproxy and #Dynamic #Residentialproxy which is the cleanest, fastest, cheapest and most reliable. Email: service@doveip.com",
+        "image": "https://pbs.twimg.com/profile_images/1638434578326241281/HgSKrxd1_normal.jpg",
+        "link": "https://doveip.com/?ap=dove"
+      },
+      {
+        "@id": "https://x.com/DrEricPaxton",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DrEricPaxton",
+        "title": "Eric Paxton 🌟",
+        "summary": "⚽ Eric Paxton, PhD: football punter & 📖 author of —The Punter's Handbook. ⚡️ Renowned for unique, effective betting strategies. 💰 Follow me for winning tips",
+        "image": "https://pbs.twimg.com/profile_images/1647743185802649604/LxDQmULj_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/louispaulcaron",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "louispaulcaron",
+        "title": "Louis-Paul Caron",
+        "summary": "Contemporary Artist ✨ Exploring the Future of Global Warming With Digital Art 🔥",
+        "image": "https://pbs.twimg.com/profile_images/1752612418683797505/Yu3Y9xUe_normal.jpg",
+        "link": "https://linktr.ee/louispaulcaron"
+      },
+      {
+        "@id": "https://x.com/taniaramburo",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "taniaramburo",
+        "title": "Tania Arámburo",
+        "summary": "Social sciences and Project manager (science). I take pictures. I love the idea of how research and public programmes could make a positive impact in our lives",
+        "image": "https://pbs.twimg.com/profile_images/1335390593795678208/-X4-quMp_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/SheCanCodeHQ",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "SheCanCodeHQ",
+        "title": "shecancodehq",
+        "summary": "#SheCanCode is a collaborative #WomenInTech community working together to tackle the tech #GenderGap - join today!",
+        "image": "https://pbs.twimg.com/profile_images/1750465073779277824/LTK7dBkF_normal.jpg",
+        "link": "http://www.shecancode.io"
+      },
+      {
+        "@id": "https://x.com/AnnaSha02632742",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "AnnaSha02632742",
+        "title": "Anna Sharma",
+        "summary": "Free spirit",
+        "image": "https://pbs.twimg.com/profile_images/1866598559740559360/RPAVylWc_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/yc_choi",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "yc_choi",
+        "title": "Michael Yongchoel Choi",
+        "summary": "Tech Leader | Expert in AI & SaaS | Driving Innovation and Building Partnerships Across Industries",
+        "image": "https://pbs.twimg.com/profile_images/1905811859728633856/sh3Gv0ck_normal.jpg",
+        "link": "https://www.linkedin.com/in/yongchoel-michael-choi-47a70b22/"
+      },
+      {
+        "@id": "https://x.com/BryceBozadjian",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "BryceBozadjian",
+        "title": "Bryce Bozadjian",
+        "summary": "MA → AZ → D.C. Comms, creativity & curiosity. @Cronkite_ASU alumna. Lover of puppers & purrs. She/her. @Climatebase Cohort 6 Fellow.",
+        "image": "https://pbs.twimg.com/profile_images/1666468570581065729/tlbyIG7H_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/AmosBitzan",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "AmosBitzan",
+        "title": "Amos Bitzan",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1465767584167600128/e1AmApLN_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/Graceeesaunders",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Graceeesaunders",
+        "title": "grace",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1621573054907162629/11z-oU14_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/ifgevents",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ifgevents",
+        "title": "IfG events",
+        "summary": "The @instituteforgov runs a diverse range of events linked to its research and learning programmes.",
+        "image": "https://pbs.twimg.com/profile_images/915250420548808708/ggC82LTy_normal.jpg",
+        "link": "https://www.instituteforgovernment.org.uk/our-events/upcoming-events"
+      },
+      {
+        "@id": "https://x.com/WerkaSarnowska",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "WerkaSarnowska",
+        "title": "Weronika Sarnowska 🇵🇱☀️🚀",
+        "summary": "radna dzielnicy Bielany, Warszawa | ekspertka @mrpips_gov__pl | @razemdla_bielan @spojnik | stypendystka @IIPP_UCL | ex @CamdenCouncil & @partiarazem",
+        "image": "https://pbs.twimg.com/profile_images/1710709259011252224/q0ZIyYvf_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/antonioeweiss",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "antonioeweiss",
+        "title": "Cllr Antonio Weiss",
+        "summary": "Author 'AI Demystified' (@FT, 2025). Public services+tech. Senior Partner @wearethepsc Digital @bennettinst Co-founder @thomasclipper Ex-Advisor @uklabour",
+        "image": "https://pbs.twimg.com/profile_images/1816494914772897792/9eKwQ88R_normal.jpg",
+        "link": "http://antonioweiss.com"
+      },
+      {
+        "@id": "https://x.com/DanielPiasko",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DanielPiasko",
+        "title": "Daniel Piaskowski",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1863512493164773376/NJgu3CzJ_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/andy_fitze",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "andy_fitze",
+        "title": "THE AI ANDY FITZE",
+        "summary": "Global #AI Advisor | Thought Leader in AI | Co-Founder #SwissCognitive | #CIO #CDO | #Speaker | #AI | #DigitalTransformation | CIO of Year Award | #CIO2020",
+        "image": "https://pbs.twimg.com/profile_images/1113390183527911425/EKa0ChG0_normal.png",
+        "link": "https://ch.linkedin.com/in/fitzerland"
+      },
+      {
+        "@id": "https://x.com/DeweyData",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DeweyData",
+        "title": "Dewey",
+        "summary": "A better way to access research data",
+        "image": "https://pbs.twimg.com/profile_images/1561802266977476611/HOKAUITq_normal.jpg",
+        "link": "http://deweydata.io"
+      },
+      {
+        "@id": "https://x.com/DataForGoodYYC",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DataForGoodYYC",
+        "title": "Data for Good YYC",
+        "summary": "Putting data into action for social good in Calgary (Geoff Zakaib - Director)",
+        "image": "https://pbs.twimg.com/profile_images/935898842544857088/fkOZytvR_normal.jpg",
+        "link": "http://www.meetup.com/Data-for-Good-Calgary/"
+      },
+      {
+        "@id": "https://x.com/GavinFreeguard",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "GavinFreeguard",
+        "title": "Gavin Freeguard (same on BSky)",
+        "summary": "Not really here - see BSky\n\nFreelance. Data, govt etc. \n\n@ConnectedByData @ODIHQ @instituteforgov @PublicDigitalHQ \n\nEx @TheOrwellPrize @newsmatters @UKLabour",
+        "image": "https://pbs.twimg.com/profile_images/1073248686396895232/ZtGXBGPs_normal.jpg",
+        "link": "https://gavinfreeguard.com/"
+      },
+      {
+        "@id": "https://x.com/pomfy4",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "pomfy4",
+        "title": "pomfy",
+        "summary": "",
+        "image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/Women_In_Data",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Women_In_Data",
+        "title": "Women in Data®",
+        "summary": "❤️ #WomenInData & @girls_in_data \n🎟 Largest female data event\n👥 60,000 strong & growing community",
+        "image": "https://pbs.twimg.com/profile_images/1572890510393544704/2cF23AKh_normal.png",
+        "link": "https://linktr.ee/womenindata"
+      },
+      {
+        "@id": "https://x.com/Maurobuz",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "Maurobuz",
+        "title": "Mauro Buzali",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/276641395/maurono_quilmes_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/hola_org",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "hola_org",
+        "title": "Hola",
+        "summary": "The only free app to get access to global content. To get the best out of the internet, whether it be for streaming, shopping or travel, head over to https://t.co/qWsR9guyXp",
+        "image": "https://pbs.twimg.com/profile_images/1311620852484628482/j_K0SAy8_normal.jpg",
+        "link": "https://hola.org/browser"
+      },
+      {
+        "@id": "https://x.com/a_philip5",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "a_philip5",
+        "title": "Andrei Philip Iacob",
+        "summary": "Tech, IT, Cybersec, Telco, M&E - Account Director with the happy chaps @RedLorryComms - also into football, basketball, boxing, and the occasional PR news",
+        "image": "https://pbs.twimg.com/profile_images/1724425464565858304/US1u7zi2_normal.jpg",
+        "link": "http://www.rlyl.com"
+      },
+      {
+        "@id": "https://x.com/orlench",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "orlench",
+        "title": "Or Lenchner",
+        "summary": "CEO, https://t.co/QOCLFrBfbI | keeping public data, public.",
+        "image": "https://pbs.twimg.com/profile_images/896781172193329152/ZhN4Kx9T_normal.jpg",
+        "link": "http://brightdata.com"
+      },
+      {
+        "@id": "https://x.com/moranlavlev",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "moranlavlev",
+        "title": "moran",
+        "summary": "",
+        "image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/DaninoHadar",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "DaninoHadar",
+        "title": "Hadar Danino",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1486651100770058243/tTsET4BW_normal.png",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/KeyserZachary",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "KeyserZachary",
+        "title": "Zachary Keyser",
+        "summary": "Market Analyst for @bright_data. West Virginia University alum. Maryland native. #RavensFlock",
+        "image": "https://pbs.twimg.com/profile_images/1201786515212447744/LyLl-PC2_normal.jpg",
+        "link": "https://www.jpost.com/author/zachary-keyser"
+      },
+      {
+        "@id": "https://x.com/KerenPakes",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "KerenPakes",
+        "title": "Keren Pakes",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1528967369334345729/46BEivGJ_normal.jpg",
+        "link": "https://brightdata.com/"
+      },
+      {
+        "@id": "https://x.com/segalnyc",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "segalnyc",
+        "title": "Ben Segal",
+        "summary": "Technology sales executive, Father of 3, wine geek, surfcaster, and guitarist.",
+        "image": "https://pbs.twimg.com/profile_images/491224103970287617/d9jibT4i_normal.jpeg",
+        "link": "http://segalnyc.blogspot.com/"
+      },
+      {
+        "@id": "https://x.com/dinisguarda",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "dinisguarda",
+        "title": "Dinis Guarda",
+        "summary": "Author Creator #AI #tech @citiesabc_ @businessabc__ https://t.co/2rFoYjjDzY @sportsabc_ @fashionabc_ @intelligenthq @metaverseabc_   #blockchain #Fintech CEO @ztudium #book",
+        "image": "https://pbs.twimg.com/profile_images/1472679271059574785/rmgZfmxZ_normal.jpg",
+        "link": "http://www.wisdomia.ai"
+      },
+      {
+        "@id": "https://x.com/up_Reach",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "up_Reach",
+        "title": "upReach",
+        "summary": "We support undergraduates from lower socioeconomic backgrounds to secure top graduate jobs. This account is inactive, follow us on Bluesky.",
+        "image": "https://pbs.twimg.com/profile_images/1341316549018267651/2DnZ9-6K_normal.jpg",
+        "link": "http://upReach.org.uk"
+      },
+      {
+        "@id": "https://x.com/MyEcoria",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "MyEcoria",
+        "title": "MyEcoria",
+        "summary": "Je suis juste un passionné d'informatique 🔥\nContact : contact@myecoria.com",
+        "image": "https://pbs.twimg.com/profile_images/1835753697130811392/ssgk9hQx_normal.jpg",
+        "link": "https://myecoria.com/"
+      },
+      {
+        "@id": "https://x.com/_disentinel",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "_disentinel",
+        "title": "Вадим Решетников",
+        "summary": "Человек и пароход",
+        "image": "https://pbs.twimg.com/profile_images/1489277302345281544/LR5-U5xr_normal.png",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/RajeshDhimar",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "RajeshDhimar",
+        "title": "Rajesh Dhimar",
+        "summary": "Fellowship and Awards Adviser, @AdvanceHE, HE development, T&L, Accreditation, PSF, professional recognition, CPD, #Fellowship, #Awards, #Bekind #Badminton",
+        "image": "https://pbs.twimg.com/profile_images/3572196746/0f0a1465b7a83eabac7f2525f3c5a892_normal.jpeg",
+        "link": "http://www.linkedin.com/pub/rajesh-dhimar/21/975/788?_mSplash=1"
+      },
+      {
+        "@id": "https://x.com/martaaran763",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "martaaran763",
+        "title": "Marta Aragones",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1263857482650259457/kAzHvEU2_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/ImpactIsrael",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ImpactIsrael",
+        "title": "Social Impact Israel",
+        "summary": "Israel's innovative SDG and social impact initiatives, greatly contributed to the well-being of humanity and the preservation of the environment 2025",
+        "image": "https://pbs.twimg.com/profile_images/1102172283391668224/Rknm11Cg_normal.png",
+        "link": "http://socialimpactil.com/"
+      },
+      {
+        "@id": "https://x.com/BrightVPN_team",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "BrightVPN_team",
+        "title": "Bright VPN - secure, private, and free VPN",
+        "summary": "The official Twitter channel for Bright VPN - 100% free VPN where you are NOT the product .\n\n#brightvpn #vpn #freevpn #proxy #bestvpn #vpnproxy",
+        "image": "https://pbs.twimg.com/profile_images/1461273365537247235/E1t-tdZI_normal.jpg",
+        "link": "https://brightvpn.com"
+      },
+      {
+        "@id": "https://x.com/elisha_picard",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "elisha_picard",
+        "title": "Elisha Picard",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1475025545016627201/r_mPlba-_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/BhuvasImpact",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "BhuvasImpact",
+        "title": "Bhuva | Sustainable FinTech Consultant",
+        "summary": "Helping businesses expand innovation & championing women’s financial inclusion\n👩🏻‍💻 Community Investor @GetWalletMax\n📈 Banking/Payments @Capgemini",
+        "image": "https://pbs.twimg.com/profile_images/1610874286989778944/J9tlimAy_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/JacobG_PR",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "JacobG_PR",
+        "title": "Jacob Greenwood",
+        "summary": "PR Manager at Content Guru. All views my own. #CX #CCaaS #ContactCentres",
+        "image": "https://pbs.twimg.com/profile_images/1447475061162655746/s4qZcwnf_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/ClimateSubak",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "ClimateSubak",
+        "title": "Subak",
+        "summary": "We find, fund, and scale organisations and individuals who are saving the planet with data. Join 700+ climate innovators: https://t.co/aeSwHToFoZ 🌍",
+        "image": "https://pbs.twimg.com/profile_images/1415226867649548289/_mDf-n4F_normal.jpg",
+        "link": "http://subak.org"
+      },
+      {
+        "@id": "https://x.com/omri_orgad",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "omri_orgad",
+        "title": "Omri Orgad",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1221558313147609092/OU6-u-rN_normal.jpg",
+        "link": "http://www.linkedin.com/pub/omri-orgad/9/4bb/4b"
+      },
+      {
+        "@id": "https://x.com/TheForeigner_US",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "TheForeigner_US",
+        "title": "The Foreigner",
+        "summary": "Est. 1986 in Israel, currently in NC, USA\n\n98% in Hebrew, because why not",
+        "image": "https://pbs.twimg.com/profile_images/1633959650902016001/gBC15qpJ_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/JaneFrostMRS",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "JaneFrostMRS",
+        "title": "Jane Frost",
+        "summary": "Chief Executive Officer at MRS – the world’s largest research association. Experienced marketer, and champion of all things research.  All views are my own.",
+        "image": "https://pbs.twimg.com/profile_images/1908550500/Twitter_image_of_Jane2_normal.jpg",
+        "link": "http://www.mrs.org.uk"
+      },
+      {
+        "@id": "https://x.com/WEDF_forum",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "WEDF_forum",
+        "title": "World Ethical Data Forum",
+        "summary": "Open source; privacy-respecting; paywall-free. Register for future sessions & watch WEDF on demand here: https://t.co/gckeT0cioZ",
+        "image": "https://pbs.twimg.com/profile_images/1361861429264056321/mFxufu45_normal.jpg",
+        "link": "https://worldethicaldataforum.org/"
+      },
+      {
+        "@id": "https://x.com/the_b_cat",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "the_b_cat",
+        "title": "Adrian",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1594712407858888705/oX9niCjj_normal.jpg",
+        "link": null
+      },
+      {
+        "@id": "https://x.com/HughShanahan",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "HughShanahan",
+        "title": "Hugh Shanahan",
+        "summary": "Not posting/liking here until Twitter is under sane management again (sorry). I continue to blather at @hughshanahan@mastodon.ie and @hughshanahan.bsky.social.",
+        "image": "https://pbs.twimg.com/profile_images/768166582300258307/lsZf4nq3_normal.jpg",
+        "link": "http://www.shanahanlab.org"
+      },
+      {
+        "@id": "https://x.com/simonesomekh",
+        "@type": [
+          "know:UserProfile",
+          "know:UserAccount"
+        ],
+        "id": null,
+        "name": "simonesomekh",
+        "title": "Simone Somekh",
+        "summary": "",
+        "image": "https://pbs.twimg.com/profile_images/1514270119907713026/_07SuqX1_normal.jpg",
+        "link": null
+      }
+    ]
+  }
+}

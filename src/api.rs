@@ -39,7 +39,7 @@ impl Apify {
     }
 
     /// See: https://apify.com/kaitoeasyapi/premium-x-follower-scraper-following-data
-    pub fn twitter_followers(
+    pub fn x_follows(
         &self,
         request: &TwitterFollowingScrapeRequest,
     ) -> Result<String, Box<dyn Error>> {

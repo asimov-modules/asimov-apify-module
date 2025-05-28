@@ -48,7 +48,7 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
             "apify~google-search-scraper" => {
                 api.google_search(&url.parse().map_err(|_| EX_DATAERR)?)?
             }
-            "C2Wk3I6xAqC4Xi63f" => api.twitter_followers(&url.parse().map_err(|_| EX_DATAERR)?)?,
+            "C2Wk3I6xAqC4Xi63f" => api.x_follows(&url.parse().map_err(|_| EX_DATAERR)?)?,
             _ => {
                 return Ok(EX_UNAVAILABLE); // not supported
             }
