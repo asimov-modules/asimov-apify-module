@@ -47,14 +47,11 @@ jobs:
     continue-on-error: false
     steps:
       - name: Build
-        uses: asimov-platform/build-rust-action@v4
+        uses: asimov-platform/build-rust-action@v5
         with:
           target: ${{ matrix.target }}
-          artifact-name: ${{ matrix.artifact }}
-          artifact-prefix: asimov-apify-module
-          binary-name: asimov-apify-fetcher
+          artifact-suffix: ${{ matrix.artifact }}
           binary-extension: ${{ matrix.extension }}
-          strip-artifact: ${{ matrix.strip || 'false' }}
           use-zigbuild: ${{ matrix.use-zigbuild || 'false' }}
           glibc-version: ${{ matrix.glibc-version }}
           rust-toolchain: 1.85.0
