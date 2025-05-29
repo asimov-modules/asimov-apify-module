@@ -67,5 +67,5 @@ jobs:
       - name: Release
         uses: asimov-platform/release-action@v2
         with:
-          token: ${{ secrets.PAT_RELEASE }}
+          #token: ${{ secrets.PAT_RELEASE }}
           changelog-path: CHANGES.md
