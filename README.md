@@ -1,8 +1,10 @@
 # ASIMOV Apify Module
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Compatibility](https://img.shields.io/badge/rust-1.85%2B-blue)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/)
-[![Package](https://img.shields.io/crates/v/asimov-apify-module)](https://crates.io/crates/asimov-apify-module)
+[![Package on Crates.io](https://img.shields.io/crates/v/asimov-apify-module.svg)](https://crates.io/crates/asimov-apify-module)
+[![Package on PyPI](https://img.shields.io/pypi/v/asimov-apify-module.svg)](https://pypi.org/project/asimov-apify-module)
+[![Package on RubyGems](https://img.shields.io/gem/v/asimov-apify-module.svg)](https://rubygems.org/gems/asimov-apify-module)
+[![Package on NPM](https://img.shields.io/npm/v/asimov-apify-module.svg)](https://npmjs.com/package/asimov-apify-module)
 
 [ASIMOV] module for data import powered by the [Apify] web automation platform.
 
@@ -11,13 +13,32 @@
 - Imports structured data from Apify actors (web automation scripts).
 - Collects the raw JSON data via the Apify API (requires an API token).
 - Constructs a semantic knowledge graph based on the [KNOW] ontology.
-- Supports plain JSON output as well as [RDF] output in the form of JSON-LD.
+- Supports plain JSON output as well as [RDF] output in the form of [JSON-LD].
+- Distributed as a standalone static binary with zero runtime dependencies.
 
 ## 🛠️ Prerequisites
 
-- [Rust](https://rust-lang.org) 1.85+ (2024 edition)
+- [Rust] 1.85+ (2024 edition) if building from source code
 
 ## ⬇️ Installation
+
+### Installation from PyPI
+
+```bash
+pip install -U asimov-apify-module
+```
+
+### Installation from RubyGems
+
+```bash
+gem install asimov-apify-module
+```
+
+### Installation from NPM
+
+```bash
+npm install -g asimov-apify-module
+```
 
 ### Installation from Source Code
 
@@ -91,5 +112,10 @@ git clone https://github.com/asimov-modules/asimov-apify-module.git
 [ASIMOV]: https://github.com/asimov-platform
 [Apify]: https://apify.com
 [Apify API token]: https://docs.apify.com/platform/integrations/api
+[JSON-LD]: https://json-ld.org
 [KNOW]: https://github.com/know-ontology
+[NPM]: https:/npmjs.org
+[Python]: https://python.org
 [RDF]: https://github.com/rust-rdf
+[Ruby]: https://ruby-lang.org
+[Rust]: https://rust-lang.org

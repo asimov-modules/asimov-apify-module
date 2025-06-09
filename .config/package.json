@@ -1,0 +1,26 @@
+{
+  "name": "asimov-apify-module",
+  "version": "{{ version }}",
+  "description": "ASIMOV module for data import powered by the Apify web automation platform.",
+  "keywords": [
+    "asimov-module",
+    "asimov",
+    "ai"
+  ],
+  "homepage": "https://github.com/asimov-modules",
+  "bugs": "https://github.com/asimov-modules/asimov-apify-module/issues",
+  "license": "Unlicense",
+  "author": "ASIMOV Protocol <support@asimov.so> (https://github.com/asimov-protocol)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asimov-modules/asimov-apify-module.git"
+  },
+  "files": [
+    "AUTHORS",
+    "CHANGES.md",
+    "README.md",
+    "UNLICENSE",
+    "VERSION"
+  ],
+  "main": "index.js"
+}
