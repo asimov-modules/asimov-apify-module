@@ -52,6 +52,13 @@ asimov-apify-fetcher  https://x.com/apify/following  # JSON
 asimov-apify-importer https://x.com/apify/following  # JSON-LD
 ```
 
+### Fetching LinkedIn Profile
+
+```bash
+asimov-apify-fetcher  https://www.linkedin.com/in/sarptecimer  # JSON
+asimov-apify-importer https://www.linkedin.com/in/sarptecimer  # JSON-LD 
+```
+
 ## ⚙ Configuration
 
 ### Environment Variables
@@ -67,12 +74,13 @@ asimov-apify-importer https://x.com/apify/following  # JSON-LD
 
 ### Supported Actors
 
-Actor   | URL Pattern | JSON | RDF
-:------ | :---------- | :--: | :--:
-Google Search | `https://www.google.com/search?q=:query` | ✅ | ✅
-X (Twitter) Followers | `https://x.com/:account/followers` | ✅ | ✅
-X (Twitter) Followees | `https://x.com/:account/following` | ✅ | ✅
-<img width="100" height="1"/> | <img width="550" height="1"/> | <img width="50" height="1"/> | <img width="50" height="1"/>
+| Actor                         | URL Pattern                              |             JSON             |             RDF              |
+|:------------------------------|:-----------------------------------------|:----------------------------:|:----------------------------:|
+| Google Search                 | `https://www.google.com/search?q=:query` |              ✅               |              ✅               |
+| X (Twitter) Followers         | `https://x.com/:account/followers`       |              ✅               |              ✅               |
+| X (Twitter) Followees         | `https://x.com/:account/following`       |              ✅               |              ✅               |
+| LinkedIn Profile              | `https://www.linkedin.com/in/:username`  |              ✅               |              ✅               |
+| <img width="100" height="1"/> | <img width="550" height="1"/>            | <img width="50" height="1"/> | <img width="50" height="1"/> |
 
 ## 👨‍💻 Development
 
