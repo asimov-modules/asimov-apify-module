@@ -7,16 +7,19 @@ pub use asimov_module::secrecy::{ExposeSecret, SecretString};
 use serde::Serialize;
 
 pub use google::*;
+pub use instagram::*;
 pub use linkedin::*;
 pub use twitter::*;
 
 mod google;
 mod twitter;
 mod linkedin;
+mod instagram;
 
 const GOOGLE_SEARCH_ACTOR: &str = "apify~google-search-scraper";
 const X_FOLLOWS_ACTOR: &str = "C2Wk3I6xAqC4Xi63f";
 const LINKEDIN_PROFILE_ACTOR: &str = "VhxlqQXRwhW8H5hNV";
+const INSTAGRAM_PROFILE_ACTOR: &str = "dSCLg0C3YEZ83HzYX";
 
 /// See: https://docs.apify.com/api
 #[derive(Debug)]
@@ -75,6 +78,15 @@ impl Apify {
         request: &LinkedInProfileScrapeRequest,
     ) -> Result<String, Box<dyn Error>> {
         self.make_request(LINKEDIN_PROFILE_ACTOR, request)
+    }
+
+    /// Performs an Instagram profile scrape
+    /// See: https://apify.com/apify/instagram-profile-scraper
+    pub fn instagram_profile(
+        &self,
+        request: &InstagramProfileScrapeRequest,
+    ) -> Result<String, Box<dyn Error>> {
+        self.make_request(INSTAGRAM_PROFILE_ACTOR, request)
     }
 }
 

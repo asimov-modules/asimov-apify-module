@@ -80,6 +80,13 @@ asimov-apify-fetcher  https://www.linkedin.com/in/sarptecimer  # JSON
 asimov-apify-importer https://www.linkedin.com/in/sarptecimer  # JSON-LD 
 ```
 
+### Fetching Instagram Profile
+
+```bash
+asimov-apify-fetcher  https://www.instagram.com/humansofny  # JSON
+asimov-apify-importer https://www.instagram.com/humansofny  # JSON-LD 
+```
+
 ## ⚙ Configuration
 
 ### Environment Variables
@@ -100,7 +107,8 @@ asimov-apify-importer https://www.linkedin.com/in/sarptecimer  # JSON-LD
 | Google Search                 | `https://www.google.com/search?q=:query` |              ✅               |              ✅               |
 | X (Twitter) Followers         | `https://x.com/:account/followers`       |              ✅               |              ✅               |
 | X (Twitter) Followees         | `https://x.com/:account/following`       |              ✅               |              ✅               |
-| LinkedIn Profile              | `https://www.linkedin.com/in/:username`  |              ✅               |              ✅               |
+| LinkedIn Profile              | `https://www.linkedin.com/in/:username`  |              ✅               |              🚧              |
+| Instagram Profile             | `https://www.instagram.com/:username`    |              ✅               |              🚧              |
 | <img width="100" height="1"/> | <img width="550" height="1"/>            | <img width="50" height="1"/> | <img width="50" height="1"/> |
 
 ## 👨‍💻 Development
@@ -122,7 +130,7 @@ git clone https://github.com/asimov-modules/asimov-apify-module.git
 [Apify API token]: https://docs.apify.com/platform/integrations/api
 [JSON-LD]: https://json-ld.org
 [KNOW]: https://github.com/know-ontology
-[NPM]: https:/npmjs.org
+[NPM]: https://npmjs.org
 [Python]: https://python.org
 [RDF]: https://github.com/rust-rdf
 [Ruby]: https://ruby-lang.org

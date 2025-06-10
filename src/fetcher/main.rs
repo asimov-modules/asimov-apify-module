@@ -50,6 +50,7 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
             }
             "C2Wk3I6xAqC4Xi63f" => api.x_follows(&url.parse().map_err(|_| EX_DATAERR)?)?,
             "VhxlqQXRwhW8H5hNV" => api.linkedin_profile(&url.parse().map_err(|_| EX_DATAERR)?)?,
+            "dSCLg0C3YEZ83HzYX" => api.instagram_profile(&url.parse().map_err(|_| EX_DATAERR)?)?,
             _ => {
                 return Ok(EX_UNAVAILABLE); // not supported
             }
