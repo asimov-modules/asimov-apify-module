@@ -2,7 +2,7 @@
 
 use crate::actor::Actor;
 
-pub static URL_PREFIX_TO_ACTOR: [(&str, Actor); 3] = [
+pub static URL_PREFIX_TO_ACTOR: [(&str, Actor); 4] = [
     // See: https://apify.com/apify/google-search-scraper
     (
         "https://www.google.com/search?q=",
@@ -29,5 +29,14 @@ pub static URL_PREFIX_TO_ACTOR: [(&str, Actor); 3] = [
             brand: "API Maestro",
             product: "Linkedin Profile Details Scraper (No Cookies Required)",
         },
+    ),
+    // See: https://apify.com/apify/instagram-profile-scraper
+    (
+        "https://www.instagram.com/",
+        Actor {
+            id: "dSCLg0C3YEZ83HzYX",
+            brand: "Apify",
+            product: "Instagram Profile Scraper",
+        }
     ),
 ];

@@ -51,6 +51,8 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
                 .filter_json_str(api.x_follows(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
             "VhxlqQXRwhW8H5hNV" => jq::linkedin_profile()
                 .filter_json_str(api.linkedin_profile(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
+            "dSCLg0C3YEZ83HzYX" => jq::linkedin_profile()
+                .filter_json_str(api.instagram_profile(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
             _ => {
                 return Ok(EX_UNAVAILABLE); // not supported
             }

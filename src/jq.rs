@@ -37,3 +37,15 @@ pub fn linkedin_profile() -> &'static JsonFilter {
 pub fn linkedin_profile() -> JsonFilter {
     include_str!("jq/linkedin_profile.jq").parse().unwrap()
 }
+
+#[cfg(feature = "std")]
+pub fn instagram_profile() -> &'static JsonFilter {
+    use std::sync::OnceLock;
+    static ONCE: OnceLock<JsonFilter> = OnceLock::new();
+    ONCE.get_or_init(|| include_str!("jq/instagram_profile.jq").parse().unwrap())
+}
+
+#[cfg(not(feature = "std"))]
+pub fn instagram_profile() -> JsonFilter {
+    include_str!("jq/instagram_profile.jq").parse().unwrap()
+}
