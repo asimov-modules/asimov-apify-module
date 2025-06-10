@@ -10,6 +10,13 @@ links:
   - https://rubygems.org/gems/asimov-apify-module
   - https://npmjs.com/package/asimov-apify-module
 
-flows:
-  - asimov-apify-fetcher
-  - asimov-apify-importer
+provides:
+  flows:
+    - asimov-apify-fetcher
+    - asimov-apify-importer
+
+handles:
+  url_patterns:
+    - https://google.com/search?q=:query
+    - https://x.com/:account/followers
+    - https://x.com/:account/following
