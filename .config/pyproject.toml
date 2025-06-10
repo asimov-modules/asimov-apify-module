@@ -1,0 +1,36 @@
+# See: https://packaging.python.org/en/latest/tutorials/packaging-projects/
+# See: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[project]
+name = "asimov-apify-module"
+description = "ASIMOV module for data import powered by the Apify web automation platform."
+readme = "README.md"
+authors = [{ name = "ASIMOV Protocol", email = "support@asimov.so" }]
+license = "Unlicense"
+license-files = ["UNLICENSE"]
+dynamic = ["version"]
+
+requires-python = ">=3.0"
+dependencies = []
+
+keywords = ["asimov-module", "asimov", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing :: General",
+]
+
+[project.urls]
+Homepage = "https://github.com/asimov-modules"
+Repository = "https://github.com/asimov-modules/asimov-apify-module"
+Changelog = "https://github.com/asimov-modules/asimov-apify-module/blob/master/CHANGES.md"
+Download = "https://github.com/asimov-modules/asimov-apify-module/releases/tag/{{ version }}"
+Releases = "https://github.com/asimov-modules/asimov-apify-module/releases"
+Issues = "https://github.com/asimov-modules/asimov-apify-module/issues"
+Documentation = "https://github.com/asimov-modules/asimov-apify-module/blob/master/README.md"

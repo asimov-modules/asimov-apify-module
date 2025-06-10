@@ -65,7 +65,8 @@ jobs:
       contents: write
     steps:
       - name: Release
-        uses: asimov-platform/release-action@v2
+        uses: asimov-platform/release-action@v3
         with:
-          #token: ${{ secrets.PAT_RELEASE }}
+          app_id: ${{ secrets.ASIMOV_APP_ID }}
+          app_private_key: ${{ secrets.ASIMOV_APP_PRIVATE_KEY }}
           changelog-path: CHANGES.md
