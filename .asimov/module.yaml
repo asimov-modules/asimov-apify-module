@@ -1,0 +1,15 @@
+# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+---
+name: apify
+label: Apify
+summary: Data import powered by the Apify web automation platform.
+links:
+  - https://github.com/asimov-modules/asimov-apify-module
+  - https://crates.io/crates/asimov-apify-module
+  - https://pypi.org/project/asimov-apify-module
+  - https://rubygems.org/gems/asimov-apify-module
+  - https://npmjs.com/package/asimov-apify-module
+
+flows:
+  - asimov-apify-fetcher
+  - asimov-apify-importer
