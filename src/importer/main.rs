@@ -34,7 +34,7 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
     let Some(api_key) = getenv::var_secret("APIFY_TOKEN") else {
         return Ok(EX_CONFIG); // not configured
     };
-    let api = Apify::new(api_key);
+    let api = Apify::new(api_key)?;
 
     // Process each of the given URL arguments:
     for url in urls {
@@ -49,6 +49,10 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
                 .filter_json_str(api.google_search(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
             "C2Wk3I6xAqC4Xi63f" => jq::x_follows()
                 .filter_json_str(api.x_follows(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
+            "VhxlqQXRwhW8H5hNV" => jq::linkedin_profile()
+                .filter_json_str(api.linkedin_profile(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
+            "dSCLg0C3YEZ83HzYX" => jq::instagram_profile()
+                .filter_json_str(api.instagram_profile(&url.parse().map_err(|_| EX_DATAERR)?)?)?,
             _ => {
                 return Ok(EX_UNAVAILABLE); // not supported
             }
