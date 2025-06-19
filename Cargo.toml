@@ -2,7 +2,7 @@
 
 [package]
 name = "asimov-apify-module"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["ASIMOV Protocol <support@asimov.so>"]
 edition = "2024"
 #rust-version = "1.85"
@@ -25,7 +25,6 @@ publish = true
 default = ["all", "cli", "std"]
 all = ["tracing"]
 cli = ["pretty", "std", "dep:clientele"]
-pretty = ["dep:colored_json"]
 std = [
     "asimov-module/std",
     "clientele/std",
@@ -35,8 +34,10 @@ std = [
     "tracing-subscriber?/std",
     "url/std",
 ]
-tracing = ["dep:tracing-subscriber"]
 unstable = []
+
+pretty = ["dep:colored_json"]
+tracing = ["dep:tracing-subscriber"]
 
 [dependencies]
 asimov-module = { version = "25.0.0-dev.8", default-features = false }
