@@ -1,4 +1,4 @@
-# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+# See: https://asimov-specs.github.io/module-manifest/
 ---
 name: apify
 label: Apify
@@ -11,7 +11,7 @@ links:
   - https://npmjs.com/package/asimov-apify-module
 
 provides:
-  flows:
+  programs:
     - asimov-apify-fetcher
     - asimov-apify-importer
 
