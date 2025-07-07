@@ -1,6 +1,6 @@
-use std::vec;
 use asimov_module::prelude::{FromStr, String, ToString, Vec};
 use serde::Serialize;
+use std::vec;
 use url::{ParseError, Url};
 
 /// See: https://apify.com/apify/instagram-profile-scraper
@@ -22,7 +22,9 @@ impl FromStr for InstagramProfileScrapeRequest {
             .ok_or(ParseError::InvalidDomainCharacter)?
             .to_string();
 
-        Ok(Self { usernames: vec![username] })
+        Ok(Self {
+            usernames: vec![username],
+        })
     }
 }
 
@@ -32,7 +34,9 @@ mod tests {
 
     #[test]
     fn test_from_str() {
-        let request = InstagramProfileScrapeRequest::from_str("https://www.instagram.com/humansofny/").unwrap();
+        let request =
+            InstagramProfileScrapeRequest::from_str("https://www.instagram.com/humansofny/")
+                .unwrap();
         assert_eq!(request.usernames[0], "humansofny");
         assert!(InstagramProfileScrapeRequest::from_str("https://www.instagram.com/").is_err());
         assert!(InstagramProfileScrapeRequest::from_str("invalid").is_err());

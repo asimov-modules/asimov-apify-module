@@ -37,6 +37,6 @@ pub static URL_PREFIX_TO_ACTOR: [(&str, Actor); 4] = [
             id: "dSCLg0C3YEZ83HzYX",
             brand: "Apify",
             product: "Instagram Profile Scraper",
-        }
+        },
     ),
 ];

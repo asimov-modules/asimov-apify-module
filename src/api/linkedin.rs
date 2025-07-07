@@ -24,7 +24,12 @@ impl FromStr for LinkedInProfileScrapeRequest {
             .ok_or(ParseError::InvalidDomainCharacter)?
             .to_string();
         // Reject extra segments (e.g., /in/username/extra)
-        if url.path_segments().map(|segments| segments.count()).unwrap_or(0) > 2 {
+        if url
+            .path_segments()
+            .map(|segments| segments.count())
+            .unwrap_or(0)
+            > 2
+        {
             return Err(ParseError::InvalidDomainCharacter);
         }
         Ok(Self { username })
@@ -37,10 +42,14 @@ mod tests {
 
     #[test]
     fn test_from_str() {
-        let request = LinkedInProfileScrapeRequest::from_str("https://www.linkedin.com/in/johndoe").unwrap();
+        let request =
+            LinkedInProfileScrapeRequest::from_str("https://www.linkedin.com/in/johndoe").unwrap();
         assert_eq!(request.username, "johndoe");
         assert!(LinkedInProfileScrapeRequest::from_str("https://www.linkedin.com/in/").is_err());
-        assert!(LinkedInProfileScrapeRequest::from_str("https://www.linkedin.com/in/johndoe/extra").is_err());
+        assert!(
+            LinkedInProfileScrapeRequest::from_str("https://www.linkedin.com/in/johndoe/extra")
+                .is_err()
+        );
         assert!(LinkedInProfileScrapeRequest::from_str("invalid").is_err());
     }
 }

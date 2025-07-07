@@ -2,7 +2,7 @@
 
 use core::error::Error;
 
-use asimov_module::prelude::{Box, format, Result, String};
+use asimov_module::prelude::{Box, Result, String, format};
 pub use asimov_module::secrecy::{ExposeSecret, SecretString};
 use serde::Serialize;
 
@@ -12,9 +12,9 @@ pub use linkedin::*;
 pub use twitter::*;
 
 mod google;
-mod twitter;
-mod linkedin;
 mod instagram;
+mod linkedin;
+mod twitter;
 
 const GOOGLE_SEARCH_ACTOR: &str = "apify~google-search-scraper";
 const X_FOLLOWS_ACTOR: &str = "C2Wk3I6xAqC4Xi63f";
@@ -45,7 +45,10 @@ impl Apify {
     ) -> Result<String, Box<dyn Error>> {
         // See: https://docs.apify.com/academy/api/run-actor-and-retrieve-data-via-api
         // See: https://docs.apify.com/api/v2/act-run-sync-post
-        let url = format!("https://api.apify.com/v2/acts/{}/run-sync-get-dataset-items", actor);
+        let url = format!(
+            "https://api.apify.com/v2/acts/{}/run-sync-get-dataset-items",
+            actor
+        );
         let mut response = ureq::post(&url)
             .header(
                 "Authorization",
