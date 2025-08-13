@@ -24,7 +24,7 @@ publish = true
 [features]
 default = ["all", "cli", "std"]
 all = ["tracing"]
-cli = ["pretty", "std", "dep:clientele"]
+cli = ["asimov-module/cli", "pretty", "std", "dep:clientele"]
 std = [
     "asimov-module/std",
     "clientele/std",
@@ -40,7 +40,9 @@ pretty = ["dep:colored_json"]
 tracing = ["dep:tracing-subscriber"]
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.8", default-features = false }
+asimov-module = { version = "25.0.0-dev.21", default-features = false, features = [
+	"serde",
+] }
 clientele = { version = "0.3", default-features = false, features = [
     "argfile",
     "dotenv",

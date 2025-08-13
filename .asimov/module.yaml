@@ -10,6 +10,11 @@ links:
   - https://rubygems.org/gems/asimov-apify-module
   - https://npmjs.com/package/asimov-apify-module
 
+config:
+  variables:
+    - name: apify-token
+      environment: "APIFY_TOKEN"
+
 provides:
   programs:
     - asimov-apify-fetcher
