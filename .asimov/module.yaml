@@ -12,7 +12,7 @@ links:
 
 config:
   variables:
-    - name: apify-token
+    - name: token
       environment: "APIFY_TOKEN"
 
 provides:

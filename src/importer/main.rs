@@ -29,21 +29,18 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
         return Ok(EX_OK);
     }
 
-    let manifest = match asimov_module::ModuleManifest::read_manifest("apify") {
-        Ok(manifest) => manifest,
-        Err(e) => {
-            eprintln!("failed to read module manifest: {e}");
-            return Ok(EX_CONFIG);
-        }
+    let Ok(manifest) = asimov_module::ModuleManifest::read_manifest("apify")
+        .inspect_err(|e| eprintln!("failed to read module manifest: {e}"))
+    else {
+        return Ok(EX_CONFIG);
     };
 
     // Obtain the Apify API token from the environment:
-    let api_key = match manifest.variable("apify-token", None) {
-        Ok(api_key) => api_key,
-        Err(e) => {
-            eprintln!("failed to get token: {e}");
-            return Ok(EX_CONFIG); // not configured
-        }
+    let Ok(api_key) = manifest
+        .variable("token", None)
+        .inspect_err(|e| eprintln!("failed to get token: {e}"))
+    else {
+        return Ok(EX_CONFIG); // not configured
     };
 
     let api = Apify::new(api_key.into())?;
