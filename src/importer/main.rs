@@ -3,7 +3,6 @@
 #[cfg(feature = "std")]
 fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
     use asimov_apify_module::{api::*, find_actor_for, jq};
-    use asimov_module::getenv;
     use clientele::SysexitsError::*;
     use std::io::stdout;
 
@@ -30,11 +29,21 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
         return Ok(EX_OK);
     }
 
+    let Ok(manifest) = asimov_module::ModuleManifest::read_manifest("apify")
+        .inspect_err(|e| eprintln!("failed to read module manifest: {e}"))
+    else {
+        return Ok(EX_CONFIG);
+    };
+
     // Obtain the Apify API token from the environment:
-    let Some(api_key) = getenv::var_secret("APIFY_TOKEN") else {
+    let Ok(api_key) = manifest
+        .variable("token", None)
+        .inspect_err(|e| eprintln!("failed to get token: {e}"))
+    else {
         return Ok(EX_CONFIG); // not configured
     };
-    let api = Apify::new(api_key)?;
+
+    let api = Apify::new(api_key.into())?;
 
     // Process each of the given URL arguments:
     for url in urls {
