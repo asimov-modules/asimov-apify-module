@@ -35,7 +35,6 @@ impl FromStr for TwitterFollowingScrapeRequest {
                 get_following: true,
                 max_followers: 200,
                 max_followings: 200,
-                ..Default::default()
             },
         })
     }

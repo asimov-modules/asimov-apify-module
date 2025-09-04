@@ -19,9 +19,8 @@ impl FromStr for GoogleSearchRequest {
         url::Url::parse(input).map(|url| {
             let mut output = Self::default();
             for (k, v) in url.query_pairs() {
-                match k.as_ref() {
-                    "q" => output.queries = v.trim().into(),
-                    _ => {}
+                if k.as_ref() == "q" {
+                    output.queries = v.trim().into()
                 }
             }
             output
