@@ -14,52 +14,55 @@ repository = "https://github.com/asimov-modules/asimov-apify-module"
 license = "Unlicense"
 keywords = ["asimov-module", "asimov", "ai"]
 categories = [
-    "command-line-utilities",
-    "api-bindings",
-    "web-programming::http-client",
-    "text-processing",
+  "command-line-utilities",
+  "api-bindings",
+  "web-programming::http-client",
+  "text-processing",
 ]
 publish = true
 
 [features]
 default = ["all", "cli", "std"]
 all = ["tracing"]
-cli = ["asimov-module/cli", "pretty", "std", "dep:clientele"]
+cli = ["asimov-module/cli", "dep:clap", "dep:clientele", "pretty", "std"]
 std = [
-    "asimov-module/std",
-    "clientele/std",
-    "jq/std",
-    "serde/std",
-    "tracing-subscriber?/fmt",
-    "tracing-subscriber?/std",
-    "url/std",
+  "asimov-module/std",
+  "clientele/std",
+  "jq/std",
+  "serde/std",
+  "tracing-subscriber?/fmt",
+  "tracing-subscriber?/std",
+  "url/std",
 ]
 unstable = []
 
 pretty = ["dep:colored_json"]
-tracing = ["dep:tracing-subscriber"]
+tracing = ["dep:tracing-subscriber", "asimov-module/tracing"]
 
 [dependencies]
 asimov-module = { version = "25.0.0-dev.21", default-features = false, features = [
-	"serde",
+  "serde",
 ] }
+clap = { version = "4.5", default-features = false, features = [
+  "std",
+], optional = true }
 clientele = { version = "0.3", default-features = false, features = [
-    "argfile",
-    "dotenv",
-    "wild",
+  "argfile",
+  "dotenv",
+  "wild",
 ], optional = true }
 colored_json = { version = "5", default-features = false, optional = true }
 jq = { version = "0.1", default-features = false, features = ["all"] }
 serde = { version = "1", default-features = false, features = ["derive"] }
 serde_json = { version = "1", default-features = false, features = ["alloc"] }
 tracing-subscriber = { version = "0.3", default-features = false, features = [
-    "alloc",
-    "tracing-log",
+  "alloc",
+  "tracing-log",
 ], optional = true }
 ureq = { version = "3.0", default-features = false, features = [
-    "platform-verifier",
-    "rustls",
-    "json",
+  "platform-verifier",
+  "rustls",
+  "json",
 ] }
 url = { version = "2.5", default-features = false }
 
