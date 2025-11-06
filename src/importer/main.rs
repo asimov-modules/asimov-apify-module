@@ -21,7 +21,6 @@ struct Options {
 fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
     use asimov_apify_module::{api::*, find_actor_for, jq};
     use clientele::SysexitsError::*;
-    use std::io::stdout;
 
     // Load environment variables from `.env`:
     clientele::dotenv().ok();
@@ -91,12 +90,7 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
         };
 
         // Serialize the response data:
-        if cfg!(feature = "pretty") {
-            colored_json::write_colored_json(&response, &mut stdout())?;
-            println!();
-        } else {
-            println!("{}", serde_json::to_string(&response).unwrap());
-        }
+        println!("{}", response);
     }
 
     Ok(EX_OK)

@@ -16,7 +16,7 @@ impl FromStr for LinkedInProfileScrapeRequest {
     type Err = ParseError;
 
     fn from_str(input: &str) -> Result<Self, Self::Err> {
-        let url = Url::parse(input)?;
+        let url = Url::parse(input.trim_end_matches('/'))?;
         let username = url
             .path_segments()
             .and_then(|mut segments| segments.nth(1)) // Skip "in" to get username
